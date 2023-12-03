@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
+import { StyledHeader, Logo, Title, LoginButton } from "./header.styles";
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   return (
-    <section className="page_404">
-      <div className="">
-        <p>Header</p>
-      </div>
-    </section>
+    <StyledHeader>
+      <Logo></Logo>
+      <Title>Выбери свой путь</Title>
+      <LoginButton variant="contained" color="primary">
+        Войти
+      </LoginButton>
+    </StyledHeader>
   );
 };
-
-export default Header;

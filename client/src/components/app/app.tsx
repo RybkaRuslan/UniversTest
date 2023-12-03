@@ -1,20 +1,21 @@
-import "./App.css";
-import { Container } from "@mui/material";
-import Router from "@/router/router.tsx";
-import Header from "@/components/header/header";
-import Footer from "@/components/footer/footer";
+import {
+  StyledContainer,
+  StyledHeader,
+  StyledRouterContainer,
+  StyledFooter,
+} from "./app.styles";
+import {Router} from "@/router/router.tsx";
 
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   return (
-    <Container>
-      <Header />
-      <Container className="layout__content--custom">
+    <StyledContainer>
+      <StyledHeader />
+      <StyledRouterContainer>
         <Router />
-      </Container>
-      <Footer />
-    </Container>
+      </StyledRouterContainer>
+      <StyledFooter />
+    </StyledContainer>
   );
 };
 
-export default App;

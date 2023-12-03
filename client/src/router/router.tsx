@@ -6,7 +6,7 @@ const NotFound = lazy(() => import("@/pages/not-found/not-found"));
 const Main = lazy(() => import("@/pages/main/main"));
 const Description = lazy(() => import("@/pages/description/description"));
 
-const Router: React.FC = () => {
+export const Router: React.FC = () => {
   return (
     <Routes>
       <Route
@@ -37,4 +37,4 @@ const Router: React.FC = () => {
   );
 };
 
-export default Router;
+
