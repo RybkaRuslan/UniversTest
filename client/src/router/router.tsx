@@ -12,12 +12,12 @@ export const Router: React.FC = () => {
       <Route
         path={"/"}
         element={
-          <Suspense>
+          <Suspense fallback={<div>Loading...</div>}>
             <Main />
           </Suspense>
         }
-        />
-          <Route
+      />
+      <Route
         path={`${AppRoutes.Description}/:id`}
         element={
           <Suspense>
@@ -36,5 +36,7 @@ export const Router: React.FC = () => {
     </Routes>
   );
 };
+
+
 
 

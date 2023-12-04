@@ -1,12 +1,8 @@
-import { Link } from "react-router-dom";
+import { Table } from "@/components/table/table";
 
 const Main: React.FC = () => {
   return (
-    <section className="page_404">
-      <div className="">
-       <p>Main</p>
-      </div>
-    </section>
+  <Table/>
   );
 };
 

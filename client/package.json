@@ -13,10 +13,12 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.19",
+    "@mui/x-data-grid": "^6.18.2",
     "@types/node": "^20.10.2",
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-query": "^3.39.3",
     "react-router-dom": "^6.20.1"
   },
   "devDependencies": {

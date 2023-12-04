@@ -4,18 +4,22 @@ import {
   StyledRouterContainer,
   StyledFooter,
 } from "./app.styles";
-import {Router} from "@/router/router.tsx";
+import { Router } from "@/router/router.tsx";
+import { QueryClient, QueryClientProvider } from "react-query";
 
+const queryClient = new QueryClient();
 
 export const App: React.FC = () => {
   return (
-    <StyledContainer>
-      <StyledHeader />
-      <StyledRouterContainer>
-        <Router />
-      </StyledRouterContainer>
-      <StyledFooter />
-    </StyledContainer>
+    <QueryClientProvider client={queryClient}>
+      <StyledContainer>
+        <StyledHeader />
+        <StyledRouterContainer>
+          <Router />
+        </StyledRouterContainer>
+        <StyledFooter />
+      </StyledContainer>
+    </QueryClientProvider>
   );
 };
 
