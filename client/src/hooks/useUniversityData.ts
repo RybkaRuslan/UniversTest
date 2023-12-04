@@ -1,10 +1,11 @@
+import { University, UseUniversityDataResult } from '@/types/types';
 import { useEffect, useState } from 'react';
-import { useQuery } from 'react-query';
+import { useQuery, UseQueryResult } from 'react-query';
 
- const useUniversityData = (country: string, name: string) => {
-  const [progress, setProgress] = useState(0);
+ const useUniversityData = (country: string, name: string): UseUniversityDataResult => {
+  const [progress, setProgress] = useState<number>(0);
 
-  const { data, isLoading, isError } = useQuery(
+  const { data, isLoading, isError }: UseQueryResult<University[], unknown> = useQuery(
     ['universities', country, name],
     () => fetchUniversities(country, name),
     {

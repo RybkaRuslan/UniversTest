@@ -1,7 +1,7 @@
 import { GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
 
 export const columns: GridColDef[] = [
-  { field: "name", headerName: "Имя", width: 200 },
+  { field: "name", headerName: "Имя", width: 300 },
   { field: "country", headerName: "Страна", width: 130 },
   { field: "alpha_two_code", headerName: "Код страны", width: 130 },
   {

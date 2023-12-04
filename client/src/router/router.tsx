@@ -1,10 +1,13 @@
 import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import { AppRoutes } from "@/router/router";
+import { TableLoader } from "@/components/loaders/table-loader/table-loader";
+import { ImageLoader } from "@/components/loaders/image-loader/image-loader";
+import { GridLoader } from "@/components/loaders/grid-loader/grid-loader";
 
 const NotFound = lazy(() => import("@/pages/not-found/not-found"));
 const Main = lazy(() => import("@/pages/main/main"));
-const Description = lazy(() => import("@/pages/description/description"));
+const Login = lazy(() => import("@/pages/login/login"));
 
 export const Router: React.FC = () => {
   return (
@@ -12,23 +15,23 @@ export const Router: React.FC = () => {
       <Route
         path={"/"}
         element={
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<TableLoader />}>
             <Main />
           </Suspense>
         }
       />
       <Route
-        path={`${AppRoutes.Description}/:id`}
+        path={AppRoutes.Login}
         element={
-          <Suspense>
-            <Description />
+          <Suspense fallback={<GridLoader />}>
+            <Login />
           </Suspense>
         }
       />
       <Route
         path="*"
         element={
-          <Suspense>
+          <Suspense fallback={<ImageLoader />}>
             <NotFound />
           </Suspense>
         }
